@@ -1,0 +1,14 @@
+C:\Users\v0cn140\contact-app\bin\Debug\netcoreapp2.1\contact-app.deps.json
+C:\Users\v0cn140\contact-app\bin\Debug\netcoreapp2.1\contact-app.runtimeconfig.json
+C:\Users\v0cn140\contact-app\bin\Debug\netcoreapp2.1\contact-app.runtimeconfig.dev.json
+C:\Users\v0cn140\contact-app\bin\Debug\netcoreapp2.1\contact-app.dll
+C:\Users\v0cn140\contact-app\bin\Debug\netcoreapp2.1\contact-app.pdb
+C:\Users\v0cn140\contact-app\obj\Debug\netcoreapp2.1\contact-app.csprojAssemblyReference.cache
+C:\Users\v0cn140\contact-app\obj\Debug\netcoreapp2.1\contact-app.csproj.CoreCompileInputs.cache
+C:\Users\v0cn140\contact-app\obj\Debug\netcoreapp2.1\contact-app.RazorAssemblyInfo.cache
+C:\Users\v0cn140\contact-app\obj\Debug\netcoreapp2.1\contact-app.RazorAssemblyInfo.cs
+C:\Users\v0cn140\contact-app\obj\Debug\netcoreapp2.1\contact-app.AssemblyInfoInputs.cache
+C:\Users\v0cn140\contact-app\obj\Debug\netcoreapp2.1\contact-app.AssemblyInfo.cs
+C:\Users\v0cn140\contact-app\obj\Debug\netcoreapp2.1\contact-app.RazorTargetAssemblyInfo.cache
+C:\Users\v0cn140\contact-app\obj\Debug\netcoreapp2.1\contact-app.dll
+C:\Users\v0cn140\contact-app\obj\Debug\netcoreapp2.1\contact-app.pdb
