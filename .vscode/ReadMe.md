@@ -106,3 +106,59 @@
   PS C:\Users\v0cn140\contact-app> dotnet run
     https://localhost:5001/
     https://localhost:5001/api/contact/getAllContacts
+
+[23] 
+  PS C:\Users\v0cn140\contact-app> ng add @angular/material
+  npm install -d @angular/cdk hammerjs
+
+[24] 
+  Add 'app.material.module.ts' in app folder.
+
+[25] 
+   Imported Angular material theme in the main style.css in src folder
+    @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+[26] 
+  Added this link of material icons into index.html in src folder
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+[27] Command to generate new component
+  PS C:\Users\v0cn140\contact-app> ng generate component contactform --module app
+  CREATE src/app/contactform/contactform.component.html (30 bytes)
+  CREATE src/app/contactform/contactform.component.spec.ts (663 bytes)
+  CREATE src/app/contactform/contactform.component.ts (289 bytes)
+  CREATE src/app/contactform/contactform.component.css (0 bytes)
+  UPDATE src/app/app.module.ts (726 bytes)
+  PS C:\Users\v0cn140\contact-app> ng generate component contactlist --module app
+  CREATE src/app/contactlist/contactlist.component.html (30 bytes)
+  CREATE src/app/contactlist/contactlist.component.spec.ts (663 bytes)
+  CREATE src/app/contactlist/contactlist.component.ts (289 bytes)
+  CREATE src/app/contactlist/contactlist.component.css (0 bytes)
+  UPDATE src/app/app.module.ts (828 bytes)
+
+[28] Add app.routing.ts
+  And add reference in 'app.module.ts'
+    import { Routing } from './app.routing';
+
+[29] Create angular services, and move to directory services
+  PS C:\Users\v0cn140\contact-app> ng generate service contact
+    CREATE src/app/contact.service.spec.ts (338 bytes)
+    CREATE src/app/contact.service.ts (136 bytes)
+  
+[30] Write contents in contact.service.ts
+
+[31] Create model folder and contact.ts
+
+[32] Write contents to app.component.html
+  <mat-toolbar>
+    <span>Contact Application</span>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+
+[33] Write to all files under contactlist dir
+
+[34] Write to all files under shared dir
+
+[35] 
+  PS C:\Users\v0cn140\contact-app> ng build
+  PS C:\Users\v0cn140\contact-app> dotnet run
