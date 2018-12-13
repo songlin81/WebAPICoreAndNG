@@ -27,6 +27,8 @@
 
 ## 9
     PS C:\Users\v0cn140\contact-app> git status
+    On branch master
+    nothing to commit, working tree clean
 
 ## 10
     Gutter Indicators--similar as code folding.
