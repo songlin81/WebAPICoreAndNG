@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using contact_app.Models;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace contact_app
 {
@@ -45,8 +46,27 @@ namespace contact_app
                 app.UseHsts();
             }
 
+            //Redirect non api calls to angular app that will handle routing of the app. 
+            app.Use(async (context, next) =>
+            {
+                await next();
+                if (context.Response.StatusCode == 404 &&
+                   !Path.HasExtension(context.Request.Path.Value) &&
+                   !context.Request.Path.Value.StartsWith("/api/"))
+                {
+                    context.Request.Path = "/index.html";
+                    await next();
+                }
+            });
+
+            // configure the app to serve index.html from /wwwroot folder
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseHttpsRedirection();
-            app.UseMvc();
+            
+            // configure the app for usage as api
+            app.UseMvcWithDefaultRoute();
         }
     }
 }

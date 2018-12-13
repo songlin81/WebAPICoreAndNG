@@ -94,3 +94,15 @@
 
 [19] After the project is created, we move all the files & folders from Contact-App to Root folder 
   PS C:\Users\v0cn140\contact-app> npm install
+
+[20] Go to 'angular.json' file, it is a configuration schema file.
+  We changed 'wwwroot' folder path in OutputPath.
+            "outputPath": "wwwroot",
+
+[21] We can see generated files under wwwroot folder.
+  PS C:\Users\v0cn140\contact-app> ng build
+
+[22] Configure startup to route to angular application
+  PS C:\Users\v0cn140\contact-app> dotnet run
+    https://localhost:5001/
+    https://localhost:5001/api/contact/getAllContacts
