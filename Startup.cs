@@ -63,7 +63,7 @@ namespace contact_app
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             
             // configure the app for usage as api
             app.UseMvcWithDefaultRoute();
