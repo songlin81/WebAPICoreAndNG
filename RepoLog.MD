@@ -32,3 +32,7 @@
 
 ## 10
     Gutter Indicators--similar as code folding.
+
+## 11
+    Add file to the staging area:
+        >git add blah.txt
