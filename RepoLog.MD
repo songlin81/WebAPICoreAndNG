@@ -35,4 +35,8 @@
 
 ## 11
     Add file to the staging area:
-        >git add blah.txt
+        >git add RepoLog.MD
+
+## 12 
+    Staging and committing can therefore be done in one go using the following syntax:
+        >git commit -m"commit of RepoLog.MD"
