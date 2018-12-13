@@ -77,3 +77,20 @@
   GET: http://localhost:5000/api/contact/getcontact?id=1
   GET: http://localhost:5000/api/contact/getallcontacts
 
+[16] 
+  PS C:\Users\v0cn140\contact-app> node -v
+  v8.12.0
+  PS C:\Users\v0cn140\contact-app> npm -v
+  6.4.1
+
+[17] Set npm proxy in command prompt
+	npm config set http-proxy http://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080
+	npm config set https-proxy https://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080
+	npm config list
+
+[18] Installation of NG
+    npm install -g @angular/cli
+    PS C:\Users\v0cn140\contact-app> ng new Contact-App --skip-install
+
+[19] After the project is created, we move all the files & folders from Contact-App to Root folder 
+  PS C:\Users\v0cn140\contact-app> npm install
