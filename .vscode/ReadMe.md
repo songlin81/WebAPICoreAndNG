@@ -46,5 +46,34 @@
   info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
         Entity Framework Core 2.1.4-rtm-31024 initialized 'ContactAppContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
 
-[10] 
+[10] Add ContactController.cs
+  PS C:\Users\v0cn140\contact-app> dotnet build
+
+[11] Setup development variable and URL for project in terminal:
+  set ASPNETCORE_ENVIRONMENT=Development
+  set ASPNETCORE_URLS=http://localhost:5000
+
+[12] 
+  >dotnet run
+
+[13] Postman
+  Settings->Proxy:  turn off 'Global Proxy Configuration'
+                    turn on 'Use System Proxy'
+
+[14] Postman
+  POST: http://localhost:5000/api/contact/addContact
+    header: 
+      [{"key":"Content-Type","name":"Content-Type","value":"application/json","description":"","type":"text"}]
+    body: raw / Json
+      {
+        "name": "Song",
+        "email": "song.lin@volvo.com",
+        "techno": "DotNet",
+        "gender": 0,
+        "birth": "02/06/1981"
+      }
+
+[15] Postman
+  GET: http://localhost:5000/api/contact/getcontact?id=1
+  GET: http://localhost:5000/api/contact/getallcontacts
 
