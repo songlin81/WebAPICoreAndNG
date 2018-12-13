@@ -32,4 +32,19 @@
 [6] to create folder 'Migrations'
     dotnet ef migrations add InitialCreate
 
-[7] 
+[7] Installation of SQLExpress
+    Connection String：Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
+    Administrator： VCN\v0cn140
+
+[8] appsettings.json
+      "ConnectionStrings": {
+        "ContactDb": "Data Source=localhost\\SQLEXPRESS;Initial Catalog=ContactDb;Integrated Security=True"
+      }
+
+[9] Create database in SQL server
+  PS C:\Users\v0cn140\contact-app> dotnet ef database update
+  info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+        Entity Framework Core 2.1.4-rtm-31024 initialized 'ContactAppContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+
+[10] 
+
