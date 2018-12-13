@@ -30,4 +30,3 @@
 
 ## 10
     Gutter Indicators--similar as code folding.
-    
