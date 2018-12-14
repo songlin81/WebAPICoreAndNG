@@ -68,10 +68,11 @@ export class ContactlistComponent implements OnInit {
   }
 
   loadContacts(): void {
-    this._contactService.getAllContact(Global.BASE_USER_ENDPOINT + 'getAllContact')
+    this._contactService.getAllContact(Global.BASE_USER_ENDPOINT + 'getAllContacts')
       .subscribe(contacts => {
         this.loadingState = false;
         this.dataSource.data = contacts;
+        console.log("got data");
       });
   }
 

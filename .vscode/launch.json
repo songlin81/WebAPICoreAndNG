@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": "contact-app",
-            "type": "coreclr",
+            "type": "chrome",
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/contact-app.dll",
@@ -12,7 +12,7 @@
             "console": "internalConsole",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
-            "webRoot": "${workspaceFolder}/src",
+            "webRoot": "${workspaceFolder}",
             "launchBrowser": {
                 "enabled": true,
                 "args": "${auto-detect-url}",

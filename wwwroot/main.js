@@ -581,6 +581,7 @@ var ContactlistComponent = /** @class */ (function () {
             .subscribe(function (contacts) {
             _this.loadingState = false;
             _this.dataSource.data = contacts;
+            console.log("got data");
         });
     };
     ContactlistComponent.prototype.getGender = function (gender) {
