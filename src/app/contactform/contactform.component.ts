@@ -60,8 +60,8 @@ export class ContactformComponent implements OnInit {
   // form value change event
   onValueChanged(data?: any) {
     if (!this.contactFrm) { return; }
+    
     const form = this.contactFrm;
-    // tslint:disable-next-line:forin
     for (const field in this.formErrors) {
       // clear previous error message (if any)
       this.formErrors[field] = '';
@@ -69,12 +69,16 @@ export class ContactformComponent implements OnInit {
       // setup custom validation message to form
       if (control && control.dirty && !control.valid) {
         const messages = this.validationMessages[field];
-        // tslint:disable-next-line:forin
         for (const key in control.errors) {
           this.formErrors[field] += messages[key] + ' ';
         }
       }
     }
+  }
+
+  //internal function for ngOnInit
+  SetControlsState(isEnable: boolean) {
+    isEnable ? this.contactFrm.enable() : this.contactFrm.disable();
   }
 
   // form submit event
@@ -129,8 +133,13 @@ export class ContactformComponent implements OnInit {
     }
   }
 
+  //internal function for onSubmit
+  mapDateData(contact: IContact): IContact {
+    contact.birth = new Date(contact.birth).toISOString();
+    return contact;
+  }
+
   // form errors model
-  // tslint:disable-next-line:member-ordering
   formErrors = {
     'name': '',
     'email': '',
@@ -139,8 +148,8 @@ export class ContactformComponent implements OnInit {
     'techno': '',
     'message': ''
   };
+
   // custom valdiation messages
-  // tslint:disable-next-line:member-ordering
   validationMessages = {
     'name': {
       'maxlength': 'Name cannot be more than 50 characters long.',
@@ -162,17 +171,5 @@ export class ContactformComponent implements OnInit {
     'message': {
       'required': 'message is required.'
     }
-
   };
-
-  //internal function for ngOnInit
-  SetControlsState(isEnable: boolean) {
-    isEnable ? this.contactFrm.enable() : this.contactFrm.disable();
-  }
-
-  //internal function for onSubmit
-  mapDateData(contact: IContact): IContact {
-    contact.birth = new Date(contact.birth).toISOString();
-    return contact;
-  }
 }
