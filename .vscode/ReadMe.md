@@ -214,5 +214,30 @@
         },
         first, PS C:\Users\v0cn140\contact-app> dotnet run;
         second, go to Debug tab and select triangle of "Launch Chrome"
-  (3) 
-    
+  (3) Debug with both of core and NG codes.
+    "compounds": [
+        {
+            "name": ".Net Core + Chrome",
+            "configurations": [".NET Core Launch (console)", "Launch Chrome"]
+        }
+    ],
+    "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/contact-app.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:5000",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true
+        },
