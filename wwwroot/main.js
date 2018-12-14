@@ -174,7 +174,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  contactform works!\n</p>\n"
+module.exports = "<form  (ngSubmit)=\"onSubmit(contactFrm)\"  [formGroup]=\"contactFrm\">\n  <h2>{{data.modalTitle}}</h2>\n  \n  <div>\n      <mat-form-field appearance=\"outline\">\n      <mat-label>Name</mat-label>\n      <input matInput placeholder=\"Name\" formControlName=\"name\">\n      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->\n      <!-- <mat-hint>Hint</mat-hint> -->\n      <mat-error *ngIf=\"formErrors.name\">\n        {{ formErrors.name }}\n      </mat-error>\n    </mat-form-field>\n  </div>\n  <div>\n    <mat-form-field appearance=\"outline\">\n      <mat-label>Email</mat-label>\n      <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">\n      <mat-error *ngIf=\"formErrors.email\">\n        {{ formErrors.email }}\n      </mat-error>\n    </mat-form-field>\n  \n  </div>\n  <p>\n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >\n        <mat-radio-button class=\"contact-radio-button\" *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">\n          {{ gndr.name }}\n        </mat-radio-button>\n      </mat-radio-group>\n      <mat-error *ngIf=\"formErrors.gender\">\n        {{ formErrors.gender }}\n      </mat-error>\n  </p>\n  <div>\n    <mat-form-field appearance=\"outline\">\n      <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a birthday\" formControlName=\"birth\">\n      <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n      <mat-datepicker #picker></mat-datepicker>\n    \n    <mat-error *ngIf=\"formErrors.birth \">\n      {{ formErrors.birth }}\n    </mat-error>\n    </mat-form-field>\n  </div>\n  <div>\n    <mat-form-field appearance=\"outline\">\n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">\n        <mat-option>-- None --</mat-option>\n        <mat-option *ngFor=\"let techno  of technologies\" [value]=\"techno\">\n          {{ techno }}\n        </mat-option>\n      </mat-select>\n      <mat-error *ngIf=\"formErrors.techno \">\n        {{ formErrors.techno }}\n      </mat-error>\n    </mat-form-field>\n  </div>\n  <div>\n    <mat-form-field appearance=\"outline\">\n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>\n      <mat-error *ngIf=\"formErrors.message \">\n        {{ formErrors.message }}\n      </mat-error>\n    </mat-form-field>\n  </div>\n  <div>\n  \n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>&nbsp;\n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"contactFrm.invalid\">{{data.modalBtnTitle}}</button>\n  </div>\n  \n  </form>"
 
 /***/ }),
 
@@ -190,12 +190,160 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContactformComponent", function() { return ContactformComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var _services_contact_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../services/contact.service */ "./src/app/services/contact.service.ts");
+/* harmony import */ var _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../shared/DBOperation */ "./src/app/shared/DBOperation.ts");
+/* harmony import */ var _shared_Global__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../shared/Global */ "./src/app/shared/Global.ts");
+
+
+
+
+
 
 
 var ContactformComponent = /** @class */ (function () {
-    function ContactformComponent() {
+    function ContactformComponent(data, fb, _contactService, dialogRef) {
+        this.data = data;
+        this.fb = fb;
+        this._contactService = _contactService;
+        this.dialogRef = dialogRef;
+        this.indLoading = false;
+        // contact: IContact;
+        this.genders = [];
+        this.technologies = [];
+        // form errors model
+        // tslint:disable-next-line:member-ordering
+        this.formErrors = {
+            'name': '',
+            'email': '',
+            'gender': '',
+            'birth': '',
+            'techno': '',
+            'message': ''
+        };
+        // custom valdiation messages
+        // tslint:disable-next-line:member-ordering
+        this.validationMessages = {
+            'name': {
+                'maxlength': 'Name cannot be more than 50 characters long.',
+                'required': 'Name is required.'
+            },
+            'email': {
+                'email': 'Invalid email format.',
+                'required': 'Email is required.'
+            },
+            'gender': {
+                'required': 'Gender is required.'
+            },
+            'techno': {
+                'required': 'Technology is required.'
+            },
+            'birth': {
+                'required': 'Birthday is required.'
+            },
+            'message': {
+                'required': 'message is required.'
+            }
+        };
     }
     ContactformComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        // built contact form
+        this.contactFrm = this.fb.group({
+            id: [''],
+            name: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].maxLength(50)]],
+            email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].email]],
+            gender: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            birth: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            techno: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            message: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]]
+        });
+        this.genders = _shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].genders;
+        this.technologies = _shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].technologies;
+        // subscribe on value changed event of form to show validation message
+        this.contactFrm.valueChanges.subscribe(function (data) { return _this.onValueChanged(data); });
+        this.onValueChanged();
+        if (this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create) {
+            this.contactFrm.reset();
+        }
+        else {
+            this.contactFrm.setValue(this.data.contact);
+        }
+        this.SetControlsState(this.data.dbops === _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete ? false : true);
+    };
+    // form value change event
+    ContactformComponent.prototype.onValueChanged = function (data) {
+        if (!this.contactFrm) {
+            return;
+        }
+        var form = this.contactFrm;
+        // tslint:disable-next-line:forin
+        for (var field in this.formErrors) {
+            // clear previous error message (if any)
+            this.formErrors[field] = '';
+            var control = form.get(field);
+            // setup custom validation message to form
+            if (control && control.dirty && !control.valid) {
+                var messages = this.validationMessages[field];
+                // tslint:disable-next-line:forin
+                for (var key in control.errors) {
+                    this.formErrors[field] += messages[key] + ' ';
+                }
+            }
+        }
+    };
+    ContactformComponent.prototype.onSubmit = function (formData) {
+        var _this = this;
+        var contactData = this.mapDateData(formData.value);
+        switch (this.data.dbops) {
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].create:
+                this._contactService.addContact(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'addContact', contactData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].update:
+                this._contactService.updateContact(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'updateContact', contactData.id, contactData).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+            case _shared_DBOperation__WEBPACK_IMPORTED_MODULE_5__["DBOperation"].delete:
+                this._contactService.deleteContact(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'deleteContact', contactData.id).subscribe(function (data) {
+                    // Success
+                    if (data.message) {
+                        _this.dialogRef.close('success');
+                    }
+                    else {
+                        _this.dialogRef.close('error');
+                    }
+                }, function (error) {
+                    _this.dialogRef.close('error');
+                });
+                break;
+        }
+    };
+    ContactformComponent.prototype.SetControlsState = function (isEnable) {
+        isEnable ? this.contactFrm.enable() : this.contactFrm.disable();
+    };
+    ContactformComponent.prototype.mapDateData = function (contact) {
+        contact.birth = new Date(contact.birth).toISOString();
+        return contact;
     };
     ContactformComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -203,7 +351,10 @@ var ContactformComponent = /** @class */ (function () {
             template: __webpack_require__(/*! ./contactform.component.html */ "./src/app/contactform/contactform.component.html"),
             styles: [__webpack_require__(/*! ./contactform.component.css */ "./src/app/contactform/contactform.component.css")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__param"](0, Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Inject"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MAT_DIALOG_DATA"])),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [Object, _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormBuilder"],
+            _services_contact_service__WEBPACK_IMPORTED_MODULE_4__["ContactService"],
+            _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatDialogRef"]])
     ], ContactformComponent);
     return ContactformComponent;
 }());
