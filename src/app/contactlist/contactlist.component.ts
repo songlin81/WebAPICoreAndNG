@@ -3,7 +3,6 @@ import { MatTableDataSource, MatSnackBar } from '@angular/material';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 import { ContactformComponent } from '../contactform/contactform.component';
-
 import { ContactService } from '../services/contact.service';
 import { IContact } from '../model/contact';
 import { DBOperation } from '../shared/DBOperation';
@@ -81,6 +80,7 @@ export class ContactlistComponent implements OnInit {
     this.modalBtnTitle = 'Add';
     this.openDialog();
   }
+  
   editContact(id: number) {
     this.dbops = DBOperation.update;
     this.modalTitle = 'Edit Contact';
@@ -88,6 +88,7 @@ export class ContactlistComponent implements OnInit {
     this.contact = this.dataSource.data.filter(x => x.id === id)[0];
     this.openDialog();
   }
+
   deleteContact(id: number) {
     this.dbops = DBOperation.delete;
     this.modalTitle = 'Confirm to Delete ?';
@@ -95,6 +96,7 @@ export class ContactlistComponent implements OnInit {
     this.contact = this.dataSource.data.filter(x => x.id === id)[0];
     this.openDialog();
   }
+
   showMessage(msg: string) {
     this.snackBar.open(msg, '', {
       duration: 3000

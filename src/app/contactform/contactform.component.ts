@@ -103,7 +103,6 @@ export class ContactformComponent implements OnInit {
       case DBOperation.update:
         this._contactService.updateContact(Global.BASE_USER_ENDPOINT + 'updateContact', contactData.id, contactData).subscribe(
           data => {
-            // Success
             if (data.message) {
               this.dialogRef.close('success');
             } else {
@@ -118,7 +117,6 @@ export class ContactformComponent implements OnInit {
       case DBOperation.delete:
         this._contactService.deleteContact(Global.BASE_USER_ENDPOINT + 'deleteContact', contactData.id).subscribe(
           data => {
-            // Success
             if (data.message) {
               this.dialogRef.close('success');
             } else {
