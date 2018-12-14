@@ -3,15 +3,14 @@
   
   <div>
       <mat-form-field appearance="outline">
-      <mat-label>Name</mat-label>
-      <input matInput placeholder="Name" formControlName="name">
-      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-      <!-- <mat-hint>Hint</mat-hint> -->
-      <mat-error *ngIf="formErrors.name">
-        {{ formErrors.name }}
-      </mat-error>
-    </mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Name" formControlName="name">
+        <mat-error *ngIf="formErrors.name">
+          {{ formErrors.name }}
+        </mat-error>
+      </mat-form-field>
   </div>
+
   <div>
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
@@ -20,11 +19,12 @@
         {{ formErrors.email }}
       </mat-error>
     </mat-form-field>
-  
   </div>
+
   <p>
       <mat-radio-group class="contact-radio-group" formControlName="gender" >
-        <mat-radio-button class="contact-radio-button" *ngFor="let gndr of genders" [value]="gndr.id">
+        <mat-radio-button class="contact-radio-button" 
+          *ngFor="let gndr of genders" [value]="gndr.id">
           {{ gndr.name }}
         </mat-radio-button>
       </mat-radio-group>
@@ -32,17 +32,18 @@
         {{ formErrors.gender }}
       </mat-error>
   </p>
+
   <div>
     <mat-form-field appearance="outline">
       <input matInput [matDatepicker]="picker" placeholder="Choose a birthday" formControlName="birth">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
-    
-    <mat-error *ngIf="formErrors.birth ">
-      {{ formErrors.birth }}
-    </mat-error>
+      <mat-error *ngIf="formErrors.birth ">
+        {{ formErrors.birth }}
+      </mat-error>
     </mat-form-field>
   </div>
+
   <div>
     <mat-form-field appearance="outline">
       <mat-select placeholder="Select a Technology" formControlName="techno">
@@ -56,6 +57,7 @@
       </mat-error>
     </mat-form-field>
   </div>
+
   <div>
     <mat-form-field appearance="outline">
       <textarea matInput placeholder="Message..." formControlName="message"></textarea>
@@ -64,10 +66,10 @@
       </mat-error>
     </mat-form-field>
   </div>
+
   <div>
-  
     <button type="button" mat-raised-button color="warn" (click)="dialogRef.close()">Cancel</button>&nbsp;
     <button type="submit" mat-raised-button color="primary" [disabled]="contactFrm.invalid">{{data.modalBtnTitle}}</button>
   </div>
   
-  </form>
+</form>
