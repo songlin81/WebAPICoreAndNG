@@ -2,6 +2,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:5000",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true
+        },
+        {
             "name": "contact-app",
             "type": "coreclr",
             "request": "launch",
@@ -12,7 +20,6 @@
             "console": "internalConsole",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
-            //"webRoot": "${workspaceFolder}",
             "launchBrowser": {
                 "enabled": true,
                 "args": "${auto-detect-url}",

@@ -196,3 +196,23 @@
 [35] 
   PS C:\Users\v0cn140\contact-app> ng build
   PS C:\Users\v0cn140\contact-app> dotnet run
+
+[36] Debug
+  (1) Only step into core code:
+      Have below in launch.json, and press F5 to step into:
+        "name": "contact-app",
+        "type": "coreclr",
+  (2) Only step into NG
+        Have below in launch.json,
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:5000",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true
+        },
+        first, PS C:\Users\v0cn140\contact-app> dotnet run;
+        second, go to Debug tab and select triangle of "Launch Chrome"
+  (3) 
+    
