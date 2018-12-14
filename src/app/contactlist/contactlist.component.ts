@@ -32,6 +32,7 @@ export class ContactlistComponent implements OnInit {
     this.loadingState = true;
     this.loadContacts();
   }
+
   openDialog(): void {
     const dialogRef = this.dialog.open(ContactformComponent, {
       width: '500px',
@@ -62,6 +63,10 @@ export class ContactlistComponent implements OnInit {
     });
   }
 
+  showMessage(msg: string) {
+    this.snackBar.open(msg, '', { duration: 3000 });
+  }
+
   loadContacts(): void {
     this._contactService.getAllContact(Global.BASE_USER_ENDPOINT + 'getAllContact')
       .subscribe(contacts => {
@@ -80,7 +85,7 @@ export class ContactlistComponent implements OnInit {
     this.modalBtnTitle = 'Add';
     this.openDialog();
   }
-  
+
   editContact(id: number) {
     this.dbops = DBOperation.update;
     this.modalTitle = 'Edit Contact';
@@ -95,11 +100,5 @@ export class ContactlistComponent implements OnInit {
     this.modalBtnTitle = 'Delete';
     this.contact = this.dataSource.data.filter(x => x.id === id)[0];
     this.openDialog();
-  }
-
-  showMessage(msg: string) {
-    this.snackBar.open(msg, '', {
-      duration: 3000
-    });
   }
 }
