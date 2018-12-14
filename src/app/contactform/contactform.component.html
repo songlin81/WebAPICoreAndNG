@@ -48,7 +48,7 @@
     <mat-form-field appearance="outline">
       <mat-select placeholder="Select a Technology" formControlName="techno">
         <mat-option>-- None --</mat-option>
-        <mat-option *ngFor="let techno  of technologies" [value]="techno">
+        <mat-option *ngFor="let techno of technologies" [value]="techno">
           {{ techno }}
         </mat-option>
       </mat-select>

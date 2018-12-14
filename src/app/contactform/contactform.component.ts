@@ -1,11 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
-
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA, AUTOCOMPLETE_PANEL_HEIGHT } from '@angular/material';
 
 import { ContactlistComponent } from '../contactlist/contactlist.component';
-
 import { IContact } from '../model/contact';
 import { ContactService } from '../services/contact.service';
 import { DBOperation } from '../shared/DBOperation';
@@ -21,20 +19,18 @@ export class ContactformComponent implements OnInit {
   msg: string;
   indLoading = false;
   contactFrm: FormGroup;
-  // dbops: DBOperation;
-  // modalTitle: string;
-  // modalBtnTitle: string;
   listFilter: string;
   selectedOption: string;
-  // contact: IContact;
   genders = [];
   technologies = [];
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: any,
+  constructor(@Inject(MAT_DIALOG_DATA) 
+    public data: any,
     private fb: FormBuilder,
     private _contactService: ContactService,
     public dialogRef: MatDialogRef<ContactlistComponent>) { }
 
+  // form init event
   ngOnInit() {
     // built contact form
     this.contactFrm = this.fb.group({
@@ -60,6 +56,7 @@ export class ContactformComponent implements OnInit {
     }
     this.SetControlsState(this.data.dbops === DBOperation.delete ? false : true);
   }
+
   // form value change event
   onValueChanged(data?: any) {
     if (!this.contactFrm) { return; }
@@ -79,41 +76,8 @@ export class ContactformComponent implements OnInit {
       }
     }
   }
-  // form errors model
-  // tslint:disable-next-line:member-ordering
-  formErrors = {
-    'name': '',
-    'email': '',
-    'gender': '',
-    'birth': '',
-    'techno': '',
-    'message': ''
-  };
-  // custom valdiation messages
-  // tslint:disable-next-line:member-ordering
-  validationMessages = {
-    'name': {
-      'maxlength': 'Name cannot be more than 50 characters long.',
-      'required': 'Name is required.'
-    },
-    'email': {
-      'email': 'Invalid email format.',
-      'required': 'Email is required.'
-    },
-    'gender': {
-      'required': 'Gender is required.'
-    },
-    'techno': {
-      'required': 'Technology is required.'
-    },
-    'birth': {
-      'required': 'Birthday is required.'
-    },
-    'message': {
-      'required': 'message is required.'
-    }
 
-  };
+  // form submit event
   onSubmit(formData: any) {
     const contactData = this.mapDateData(formData.value);
     switch (this.data.dbops) {
@@ -164,10 +128,49 @@ export class ContactformComponent implements OnInit {
         break;
     }
   }
+
+  // form errors model
+  // tslint:disable-next-line:member-ordering
+  formErrors = {
+    'name': '',
+    'email': '',
+    'gender': '',
+    'birth': '',
+    'techno': '',
+    'message': ''
+  };
+  // custom valdiation messages
+  // tslint:disable-next-line:member-ordering
+  validationMessages = {
+    'name': {
+      'maxlength': 'Name cannot be more than 50 characters long.',
+      'required': 'Name is required.'
+    },
+    'email': {
+      'email': 'Invalid email format.',
+      'required': 'Email is required.'
+    },
+    'gender': {
+      'required': 'Gender is required.'
+    },
+    'techno': {
+      'required': 'Technology is required.'
+    },
+    'birth': {
+      'required': 'Birthday is required.'
+    },
+    'message': {
+      'required': 'message is required.'
+    }
+
+  };
+
+  //internal function for ngOnInit
   SetControlsState(isEnable: boolean) {
     isEnable ? this.contactFrm.enable() : this.contactFrm.disable();
   }
 
+  //internal function for onSubmit
   mapDateData(contact: IContact): IContact {
     contact.birth = new Date(contact.birth).toISOString();
     return contact;
