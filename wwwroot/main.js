@@ -577,7 +577,7 @@ var ContactlistComponent = /** @class */ (function () {
     };
     ContactlistComponent.prototype.loadContacts = function () {
         var _this = this;
-        this._contactService.getAllContact(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'getAllContact')
+        this._contactService.getAllContact(_shared_Global__WEBPACK_IMPORTED_MODULE_6__["Global"].BASE_USER_ENDPOINT + 'getAllContacts')
             .subscribe(function (contacts) {
             _this.loadingState = false;
             _this.dataSource.data = contacts;
