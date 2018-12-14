@@ -1,6 +1,23 @@
 {
     "version": "0.2.0",
+    "compounds": [
+        {
+            "name": ".Net Core + Chrome",
+            "configurations": [".NET Core Launch (console)", "Launch Chrome"]
+        }
+    ],
     "configurations": [
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/contact-app.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
         {
             "type": "chrome",
             "request": "launch",
