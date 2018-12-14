@@ -25,16 +25,14 @@ namespace contact_app
 
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ContactAppContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("ContactDb")));
+                options.UseSqlServer(Configuration.GetConnectionString("ContactDb")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -63,8 +61,6 @@ namespace contact_app
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
-            //app.UseHttpsRedirection();
-            
             // configure the app for usage as api
             app.UseMvcWithDefaultRoute();
         }
