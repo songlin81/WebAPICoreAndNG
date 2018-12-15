@@ -241,3 +241,36 @@
             "webRoot": "${workspaceFolder}",
             "sourceMaps": true
         },
+
+[37] Github setup：
+  PS C:\Users\v0cn140\contact-app> git checkout master
+  Checking out files: 100% (31392/31392), done.
+  Switched to branch 'master'
+  PS C:\Users\v0cn140\contact-app> git checkout dev
+  Checking out files: 100% (31392/31392), done.
+  Switched to branch 'dev'
+  PS C:\Users\v0cn140\contact-app> git remote add origin https://github.com/songlin81/WebAPICoreAndNG.git
+  PS C:\Users\v0cn140\contact-app> git remote -v
+
+[38] Check above git settings:
+  C:\Users\v0cn140\contact-app\.git\config
+    [core]
+      repositoryformatversion = 0
+      filemode = false
+      bare = false
+      logallrefupdates = true
+      symlinks = false
+      ignorecase = true
+    [remote "origin"]
+      url = https://github.com/songlin81/WebAPICoreAndNG.git
+      fetch = +refs/heads/*:refs/remotes/origin/*
+
+[39] Set Git proxy and verify
+  git config --global http.proxy http://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080
+  git config --global --get http.proxy
+  git config --global https.proxy https://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080
+  git config --global --get https.proxy
+
+[40] Github push
+  >git push -u origin master
+  >git push -u origin dev
