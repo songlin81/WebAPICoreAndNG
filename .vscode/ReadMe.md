@@ -274,3 +274,7 @@
 [40] Github push
   >git push -u origin master
   >git push -u origin dev
+
+[41] Add new component for displaying toolkit for NST application
+  PS C:\Users\v0cn140\contact-app> ng generate component NSTform --module app
+

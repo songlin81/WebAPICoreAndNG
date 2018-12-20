@@ -12,12 +12,14 @@ import { AppComponent } from './app.component';
 import { ContactformComponent } from './contactform/contactform.component';
 import { ContactlistComponent } from './contactlist/contactlist.component';
 import { ContactService } from './services/contact.service';
+import { NSTformComponent } from './nstform/nstform.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactformComponent,
-    ContactlistComponent
+    ContactlistComponent,
+    NSTformComponent
   ],
   imports: [
     BrowserModule,

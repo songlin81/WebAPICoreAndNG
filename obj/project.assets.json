@@ -11801,11 +11801,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\v0cn140\\contact-app\\contact-app.csproj",
+      "projectUniqueName": "c:\\Users\\v0cn140\\contact-app\\contact-app.csproj",
       "projectName": "contact-app",
-      "projectPath": "C:\\Users\\v0cn140\\contact-app\\contact-app.csproj",
+      "projectPath": "c:\\Users\\v0cn140\\contact-app\\contact-app.csproj",
       "packagesPath": "C:\\Users\\v0cn140\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\v0cn140\\contact-app\\obj\\",
+      "outputPath": "c:\\Users\\v0cn140\\contact-app\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11819,7 +11819,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://nexus.it.volvo.net/repository/nuget-drs-ms": {}
+        "http://nexus.it.volvo.net/repository/nuget-drs-ms": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.1": {

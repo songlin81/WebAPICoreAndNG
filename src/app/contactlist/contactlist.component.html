@@ -1,12 +1,17 @@
 <div class="spinner" *ngIf="loadingState; else contactlist">
   <mat-spinner></mat-spinner>
 </div>
-
+<div>{{employee.firstName}}</div>
 <ng-template class="contactlist" #contactlist>
   <h2 style="text-align: center;">Contact List</h2>
   <div class="contactlist-container mat-elevation-z8">
     <div>
       <button title="Create" mat-raised-button color="accent" (click)="addContact()">Create</button>
+    </div>
+    <div>
+      <nav>
+        <a routerLink="/nst" >Info Center</a>
+      </nav>
     </div>
     <table mat-table #table [dataSource]="dataSource">
       <!-- Name Column -->

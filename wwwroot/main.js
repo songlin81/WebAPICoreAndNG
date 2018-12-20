@@ -74,7 +74,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n-->\n<mat-toolbar>\n  <span>{{ title }}</span>\n</mat-toolbar>\n<router-outlet></router-outlet>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n<h2>Here are some links to help you start: </h2>\r\n<ul>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\r\n  </li>\r\n</ul>\r\n-->\r\n<mat-toolbar>\r\n  <span>{{ title }}</span>\r\n</mat-toolbar>\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
-        this.title = 'Contact Application';
+        this.title = 'NST 4';
     }
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -205,6 +205,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _contactform_contactform_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./contactform/contactform.component */ "./src/app/contactform/contactform.component.ts");
 /* harmony import */ var _contactlist_contactlist_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./contactlist/contactlist.component */ "./src/app/contactlist/contactlist.component.ts");
 /* harmony import */ var _services_contact_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./services/contact.service */ "./src/app/services/contact.service.ts");
+/* harmony import */ var _nstform_nstform_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./nstform/nstform.component */ "./src/app/nstform/nstform.component.ts");
+
 
 
 
@@ -227,7 +229,8 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_10__["AppComponent"],
                 _contactform_contactform_component__WEBPACK_IMPORTED_MODULE_11__["ContactformComponent"],
-                _contactlist_contactlist_component__WEBPACK_IMPORTED_MODULE_12__["ContactlistComponent"]
+                _contactlist_contactlist_component__WEBPACK_IMPORTED_MODULE_12__["ContactlistComponent"],
+                _nstform_nstform_component__WEBPACK_IMPORTED_MODULE_14__["NSTformComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -264,12 +267,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _contactlist_contactlist_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./contactlist/contactlist.component */ "./src/app/contactlist/contactlist.component.ts");
 /* harmony import */ var _contactform_contactform_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contactform/contactform.component */ "./src/app/contactform/contactform.component.ts");
+/* harmony import */ var _nstform_nstform_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nstform/nstform.component */ "./src/app/nstform/nstform.component.ts");
+
 
 
 
 var appRoutes = [
     { path: '', pathMatch: 'full', component: _contactlist_contactlist_component__WEBPACK_IMPORTED_MODULE_1__["ContactlistComponent"] },
-    { path: 'contactform', component: _contactform_contactform_component__WEBPACK_IMPORTED_MODULE_2__["ContactformComponent"] }
+    { path: 'contactform', component: _contactform_contactform_component__WEBPACK_IMPORTED_MODULE_2__["ContactformComponent"] },
+    { path: 'nst', component: _nstform_nstform_component__WEBPACK_IMPORTED_MODULE_3__["NSTformComponent"] }
 ];
 var Routing = _angular_router__WEBPACK_IMPORTED_MODULE_0__["RouterModule"].forRoot(appRoutes);
 
@@ -294,7 +300,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form  (ngSubmit)=\"onSubmit(contactFrm)\"  [formGroup]=\"contactFrm\">\n  <h2>{{data.modalTitle}}</h2>\n  \n  <div>\n      <mat-form-field appearance=\"outline\">\n        <mat-label>Name</mat-label>\n        <input matInput placeholder=\"Name\" formControlName=\"name\">\n        <mat-error *ngIf=\"formErrors.name\">\n          {{ formErrors.name }}\n        </mat-error>\n      </mat-form-field>\n  </div>\n\n  <div>\n    <mat-form-field appearance=\"outline\">\n      <mat-label>Email</mat-label>\n      <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">\n      <mat-error *ngIf=\"formErrors.email\">\n        {{ formErrors.email }}\n      </mat-error>\n    </mat-form-field>\n  </div>\n\n  <p>\n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >\n        <mat-radio-button class=\"contact-radio-button\" \n          *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">\n          {{ gndr.name }}\n        </mat-radio-button>\n      </mat-radio-group>\n      <mat-error *ngIf=\"formErrors.gender\">\n        {{ formErrors.gender }}\n      </mat-error>\n  </p>\n\n  <div>\n    <mat-form-field appearance=\"outline\">\n      <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a birthday\" formControlName=\"birth\">\n      <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\n      <mat-datepicker #picker></mat-datepicker>\n      <mat-error *ngIf=\"formErrors.birth \">\n        {{ formErrors.birth }}\n      </mat-error>\n    </mat-form-field>\n  </div>\n\n  <div>\n    <mat-form-field appearance=\"outline\">\n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">\n        <mat-option>-- None --</mat-option>\n        <mat-option *ngFor=\"let techno of technologies\" [value]=\"techno\">\n          {{ techno }}\n        </mat-option>\n      </mat-select>\n      <mat-error *ngIf=\"formErrors.techno \">\n        {{ formErrors.techno }}\n      </mat-error>\n    </mat-form-field>\n  </div>\n\n  <div>\n    <mat-form-field appearance=\"outline\">\n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>\n      <mat-error *ngIf=\"formErrors.message \">\n        {{ formErrors.message }}\n      </mat-error>\n    </mat-form-field>\n  </div>\n\n  <div>\n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>&nbsp;\n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"contactFrm.invalid\">{{data.modalBtnTitle}}</button>\n  </div>\n  \n</form>"
+module.exports = "<form  (ngSubmit)=\"onSubmit(contactFrm)\"  [formGroup]=\"contactFrm\">\r\n  <h2>{{data.modalTitle}}</h2>\r\n  \r\n  <div>\r\n      <mat-form-field appearance=\"outline\">\r\n        <mat-label>Name</mat-label>\r\n        <input matInput placeholder=\"Name\" formControlName=\"name\">\r\n        <mat-error *ngIf=\"formErrors.name\">\r\n          {{ formErrors.name }}\r\n        </mat-error>\r\n      </mat-form-field>\r\n  </div>\r\n\r\n  <div>\r\n    <mat-form-field appearance=\"outline\">\r\n      <mat-label>Email</mat-label>\r\n      <input type=\"email\" matInput placeholder=\"email\" formControlName=\"email\">\r\n      <mat-error *ngIf=\"formErrors.email\">\r\n        {{ formErrors.email }}\r\n      </mat-error>\r\n    </mat-form-field>\r\n  </div>\r\n\r\n  <p>\r\n      <mat-radio-group class=\"contact-radio-group\" formControlName=\"gender\" >\r\n        <mat-radio-button class=\"contact-radio-button\" \r\n          *ngFor=\"let gndr of genders\" [value]=\"gndr.id\">\r\n          {{ gndr.name }}\r\n        </mat-radio-button>\r\n      </mat-radio-group>\r\n      <mat-error *ngIf=\"formErrors.gender\">\r\n        {{ formErrors.gender }}\r\n      </mat-error>\r\n  </p>\r\n\r\n  <div>\r\n    <mat-form-field appearance=\"outline\">\r\n      <input matInput [matDatepicker]=\"picker\" placeholder=\"Choose a birthday\" formControlName=\"birth\">\r\n      <mat-datepicker-toggle matSuffix [for]=\"picker\"></mat-datepicker-toggle>\r\n      <mat-datepicker #picker></mat-datepicker>\r\n      <mat-error *ngIf=\"formErrors.birth \">\r\n        {{ formErrors.birth }}\r\n      </mat-error>\r\n    </mat-form-field>\r\n  </div>\r\n\r\n  <div>\r\n    <mat-form-field appearance=\"outline\">\r\n      <mat-select placeholder=\"Select a Technology\" formControlName=\"techno\">\r\n        <mat-option>-- None --</mat-option>\r\n        <mat-option *ngFor=\"let techno of technologies\" [value]=\"techno\">\r\n          {{ techno }}\r\n        </mat-option>\r\n      </mat-select>\r\n      <mat-error *ngIf=\"formErrors.techno \">\r\n        {{ formErrors.techno }}\r\n      </mat-error>\r\n    </mat-form-field>\r\n  </div>\r\n\r\n  <div>\r\n    <mat-form-field appearance=\"outline\">\r\n      <textarea matInput placeholder=\"Message...\" formControlName=\"message\"></textarea>\r\n      <mat-error *ngIf=\"formErrors.message \">\r\n        {{ formErrors.message }}\r\n      </mat-error>\r\n    </mat-form-field>\r\n  </div>\r\n\r\n  <div>\r\n    <button type=\"button\" mat-raised-button color=\"warn\" (click)=\"dialogRef.close()\">Cancel</button>&nbsp;\r\n    <button type=\"submit\" mat-raised-button color=\"primary\" [disabled]=\"contactFrm.invalid\">{{data.modalBtnTitle}}</button>\r\n  </div>\r\n  \r\n</form>"
 
 /***/ }),
 
@@ -498,7 +504,7 @@ module.exports = ".spinner{\r\n    top: 45%;\r\n    left: 47%;\r\n    position: 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else contactlist\">\n  <mat-spinner></mat-spinner>\n</div>\n\n<ng-template class=\"contactlist\" #contactlist>\n  <h2 style=\"text-align: center;\">Contact List</h2>\n  <div class=\"contactlist-container mat-elevation-z8\">\n    <div>\n      <button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addContact()\">Create</button>\n    </div>\n    <table mat-table #table [dataSource]=\"dataSource\">\n      <!-- Name Column -->\n      <ng-container matColumnDef=\"name\">\n        <th mat-header-cell *matHeaderCellDef> Name </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\n      </ng-container>     \n      <!-- Email Column -->\n      <ng-container matColumnDef=\"email\">\n        <th mat-header-cell *matHeaderCellDef> Email </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\n      </ng-container>    \n      <!-- Gender Column -->\n      <ng-container matColumnDef=\"gender\">\n        <th mat-header-cell *matHeaderCellDef> Gender </th>\n        <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>\n      </ng-container>     \n      <!-- Birth Column -->\n      <ng-container matColumnDef=\"birth\">\n        <th mat-header-cell *matHeaderCellDef> Birthday </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.birth | date: 'MM-dd-yyyy' }} </td>\n      </ng-container>\n      <!-- Technology Column -->\n      <ng-container matColumnDef=\"techno\">\n        <th mat-header-cell *matHeaderCellDef> Technology </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.techno}} </td>\n      </ng-container>\n      <!-- Message Column -->\n      <ng-container matColumnDef=\"message\">\n        <th mat-header-cell *matHeaderCellDef> Message </th>\n        <td mat-cell *matCellDef=\"let element\"> {{element.message}} </td>\n      </ng-container>\n      <ng-container matColumnDef=\"action\">\n        <th mat-header-cell *matHeaderCellDef> Action </th>\n        <td mat-cell *matCellDef=\"let element\">\n          <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editContact(element.id)\">Edit</button>\n          <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteContact(element.id)\">Delete</button>\n        </td>\n      </ng-container>\n      \n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\n      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\n    </table> \n  </div>\n</ng-template>"
+module.exports = "<div class=\"spinner\" *ngIf=\"loadingState; else contactlist\">\r\n  <mat-spinner></mat-spinner>\r\n</div>\r\n<div>{{employee.firstName}}</div>\r\n<ng-template class=\"contactlist\" #contactlist>\r\n  <h2 style=\"text-align: center;\">Contact List</h2>\r\n  <div class=\"contactlist-container mat-elevation-z8\">\r\n    <div>\r\n      <button title=\"Create\" mat-raised-button color=\"accent\" (click)=\"addContact()\">Create</button>\r\n    </div>\r\n    <div>\r\n      <nav>\r\n        <a routerLink=\"/nst\" >Info Center</a>\r\n      </nav>\r\n    </div>\r\n    <table mat-table #table [dataSource]=\"dataSource\">\r\n      <!-- Name Column -->\r\n      <ng-container matColumnDef=\"name\">\r\n        <th mat-header-cell *matHeaderCellDef> Name </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n      </ng-container>     \r\n      <!-- Email Column -->\r\n      <ng-container matColumnDef=\"email\">\r\n        <th mat-header-cell *matHeaderCellDef> Email </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.email}} </td>\r\n      </ng-container>    \r\n      <!-- Gender Column -->\r\n      <ng-container matColumnDef=\"gender\">\r\n        <th mat-header-cell *matHeaderCellDef> Gender </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{getGender(element.gender)}} </td>\r\n      </ng-container>     \r\n      <!-- Birth Column -->\r\n      <ng-container matColumnDef=\"birth\">\r\n        <th mat-header-cell *matHeaderCellDef> Birthday </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.birth | date: 'MM-dd-yyyy' }} </td>\r\n      </ng-container>\r\n      <!-- Technology Column -->\r\n      <ng-container matColumnDef=\"techno\">\r\n        <th mat-header-cell *matHeaderCellDef> Technology </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.techno}} </td>\r\n      </ng-container>\r\n      <!-- Message Column -->\r\n      <ng-container matColumnDef=\"message\">\r\n        <th mat-header-cell *matHeaderCellDef> Message </th>\r\n        <td mat-cell *matCellDef=\"let element\"> {{element.message}} </td>\r\n      </ng-container>\r\n      <ng-container matColumnDef=\"action\">\r\n        <th mat-header-cell *matHeaderCellDef> Action </th>\r\n        <td mat-cell *matCellDef=\"let element\">\r\n          <button title=\"Edit\" mat-raised-button color=\"primary\" (click)=\"editContact(element.id)\">Edit</button>\r\n          <button title=\"Delete\" mat-raised-button color=\"warn\" (click)=\"deleteContact(element.id)\">Delete</button>\r\n        </td>\r\n      </ng-container>\r\n      \r\n      <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n      <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n    </table> \r\n  </div>\r\n</ng-template>"
 
 /***/ }),
 
@@ -532,6 +538,12 @@ var ContactlistComponent = /** @class */ (function () {
         this.snackBar = snackBar;
         this._contactService = _contactService;
         this.dialog = dialog;
+        this.employee = {
+            firstName: "Akshay",
+            lastName: "Phadke",
+            Address: "Mumbai ",
+            Image: "Images/Akshay.jpg"
+        };
         // set columns that will need to show in listing table
         this.displayedColumns = ['name', 'email', 'gender', 'birth', 'techno', 'message', 'action'];
         // setting up datasource for material table
@@ -616,6 +628,62 @@ var ContactlistComponent = /** @class */ (function () {
         tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_material__WEBPACK_IMPORTED_MODULE_2__["MatSnackBar"], _services_contact_service__WEBPACK_IMPORTED_MODULE_4__["ContactService"], _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatDialog"]])
     ], ContactlistComponent);
     return ContactlistComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/nstform/nstform.component.css":
+/*!***********************************************!*\
+  !*** ./src/app/nstform/nstform.component.css ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL25zdGZvcm0vbnN0Zm9ybS5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/nstform/nstform.component.html":
+/*!************************************************!*\
+  !*** ./src/app/nstform/nstform.component.html ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<p>\r\n  nstform works!\r\n</p>\r\n"
+
+/***/ }),
+
+/***/ "./src/app/nstform/nstform.component.ts":
+/*!**********************************************!*\
+  !*** ./src/app/nstform/nstform.component.ts ***!
+  \**********************************************/
+/*! exports provided: NSTformComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NSTformComponent", function() { return NSTformComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+
+
+var NSTformComponent = /** @class */ (function () {
+    function NSTformComponent() {
+    }
+    NSTformComponent.prototype.ngOnInit = function () {
+    };
+    NSTformComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+            selector: 'app-nstform',
+            template: __webpack_require__(/*! ./nstform.component.html */ "./src/app/nstform/nstform.component.html"),
+            styles: [__webpack_require__(/*! ./nstform.component.css */ "./src/app/nstform/nstform.component.css")]
+        }),
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    ], NSTformComponent);
+    return NSTformComponent;
 }());
 
 

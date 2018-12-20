@@ -21,6 +21,13 @@ export class ContactlistComponent implements OnInit {
   modalTitle: string;
   modalBtnTitle: string;
 
+  employee = {  
+    firstName: "Akshay",  
+    lastName: "Phadke",  
+    Address: "Mumbai ",  
+    Image: "Images/Akshay.jpg"  
+  };
+
   // set columns that will need to show in listing table
   displayedColumns = ['name', 'email', 'gender', 'birth', 'techno', 'message', 'action'];
   // setting up datasource for material table
