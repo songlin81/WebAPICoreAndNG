@@ -40,8 +40,8 @@
 [2] File->Preference->Setting->User Setting->Proxy
 {
     "workbench.startupEditor": "newUntitledFile",
-    "http.proxy": "http://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080",
-    "https.proxy": "https://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080",
+    "http.proxy": "http://v0cn140:Volvo250@httppxsait.srv.volvo.com:8080",
+    "https.proxy": "https://v0cn140:Volvo250@httppxsait.srv.volvo.com:8080",
     "terminal.integrated.rendererType": "dom"
 }
 
@@ -118,8 +118,8 @@
   6.4.1
 
 [17] Set npm proxy in command prompt
-	npm config set http-proxy http://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080
-	npm config set https-proxy https://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080
+	npm config set http-proxy http://v0cn140:Volvo250@httppxsait.srv.volvo.com:8080
+	npm config set https-proxy https://v0cn140:Volvo250@httppxsait.srv.volvo.com:8080
 	npm config list
 
 [18] Installation of NG
@@ -266,9 +266,9 @@
       fetch = +refs/heads/*:refs/remotes/origin/*
 
 [39] Set Git proxy and verify
-  git config --global http.proxy http://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080
+  git config --global http.proxy http://v0cn140:Volvo250@httppxsait.srv.volvo.com:8080
   git config --global --get http.proxy
-  git config --global https.proxy https://v0cn140:Volvo249@httppxsait.srv.volvo.com:8080
+  git config --global https.proxy https://v0cn140:Volvo250@httppxsait.srv.volvo.com:8080
   git config --global --get https.proxy
 
 [40] Github push
@@ -278,3 +278,7 @@
 [41] Add new component for displaying toolkit for NST application
   PS C:\Users\v0cn140\contact-app> ng generate component NSTform --module app
 
+[42] Add supports of JQ
+  Angular.json:
+    "scripts": ["./node_modules/jquery/dist/jquery.min.js"]
+  PS C:\Users\v0cn140\contact-app> npm install jquery --save

@@ -641,7 +641,7 @@ var ContactlistComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL25zdGZvcm0vbnN0Zm9ybS5jb21wb25lbnQuY3NzIn0= */"
+module.exports = ".ResponsibleUnit {\r\n\tbackground: url('/assets/images/sys.png') no-repeat -10px -196px;\r\n\twidth: 350px;\r\n\theight: 18px;\r\n}\r\n.PriceListDate {\r\n\tbackground: url('/assets/images/sys.png') no-repeat -10px -240px;\r\n\twidth: 145px;\r\n\theight: 18px;\r\n}\r\nhr {\r\n    display: block;\r\n    height: 1px;\r\n    border: 0;\r\n    border-top: 1px solid #ccc;\r\n    margin: 1em 2;\r\n    padding: 0;\r\n}\r\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbnN0Zm9ybS9uc3Rmb3JtLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Q0FDQyxpRUFBaUU7Q0FDakUsYUFBYTtDQUNiLGFBQWE7Q0FDYjtBQUNEO0NBQ0MsaUVBQWlFO0NBQ2pFLGFBQWE7Q0FDYixhQUFhO0NBQ2I7QUFDRDtJQUNJLGVBQWU7SUFDZixZQUFZO0lBQ1osVUFBVTtJQUNWLDJCQUEyQjtJQUMzQixjQUFjO0lBQ2QsV0FBVztDQUNkIiwiZmlsZSI6InNyYy9hcHAvbnN0Zm9ybS9uc3Rmb3JtLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuUmVzcG9uc2libGVVbml0IHtcclxuXHRiYWNrZ3JvdW5kOiB1cmwoJy9hc3NldHMvaW1hZ2VzL3N5cy5wbmcnKSBuby1yZXBlYXQgLTEwcHggLTE5NnB4O1xyXG5cdHdpZHRoOiAzNTBweDtcclxuXHRoZWlnaHQ6IDE4cHg7XHJcbn1cclxuLlByaWNlTGlzdERhdGUge1xyXG5cdGJhY2tncm91bmQ6IHVybCgnL2Fzc2V0cy9pbWFnZXMvc3lzLnBuZycpIG5vLXJlcGVhdCAtMTBweCAtMjQwcHg7XHJcblx0d2lkdGg6IDE0NXB4O1xyXG5cdGhlaWdodDogMThweDtcclxufVxyXG5ociB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIGhlaWdodDogMXB4O1xyXG4gICAgYm9yZGVyOiAwO1xyXG4gICAgYm9yZGVyLXRvcDogMXB4IHNvbGlkICNjY2M7XHJcbiAgICBtYXJnaW46IDFlbSAyO1xyXG4gICAgcGFkZGluZzogMDtcclxufSJdfQ== */"
 
 /***/ }),
 
@@ -652,7 +652,7 @@ module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  nstform works!\r\n</p>\r\n"
+module.exports = "<h1 class=\"title\" style=\"display:none\">{{title}}</h1>\r\n<div>\r\n  <img src=\"{{toolkit.Image}}\" width=\"1922px\" height=\"543px\" usemap=\"#nstmap\"/>\r\n  <map name=\"nstmap\">\r\n    <area target=\"\" alt=\"\" title=\"\" coords=\"0,173,376,219\" shape=\"rect\" (click)=\"toggleTitle(540)\">\r\n  </map>\r\n</div>\r\n<hr/>\r\n<div class=\"ResponsibleUnit\"></div><hr/>\r\n<p>{{price}}</p>\r\n<div class=\"PriceListDate\"></div><hr/>\r\n"
 
 /***/ }),
 
@@ -672,8 +672,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var NSTformComponent = /** @class */ (function () {
     function NSTformComponent() {
+        this.title = 'NG+JQ or NST';
+        this.price = "select * from";
+        this.toolkit = {
+            Image: "assets/images/sys.png"
+        };
     }
     NSTformComponent.prototype.ngOnInit = function () {
+    };
+    NSTformComponent.prototype.toggleTitle = function (pager) {
+        $('.title').slideToggle();
     };
     NSTformComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
