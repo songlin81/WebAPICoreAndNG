@@ -16,6 +16,11 @@
       On branch master
       nothing to commit, working tree clean
 
+      PS C:\Users\v0cn140\contact-app> git branch
+        dev
+      * master
+      PS C:\Users\v0cn140\contact-app> git checkout dev
+
   ## 10 Gutter Indicators--similar as code folding.
 
   ## 11 Add file to the staging area:
