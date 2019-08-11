@@ -21,6 +21,11 @@
       * master
       PS C:\Users\v0cn140\contact-app> git checkout dev
 
+      PS C:\Users\v0cn140\contact-app> git checkout master
+      Already on 'master'
+      PS C:\Users\v0cn140\contact-app> git merge dev
+      Already up to date.
+
   ## 10 Gutter Indicators--similar as code folding.
 
   ## 11 Add file to the staging area:
@@ -43,7 +48,7 @@
     "terminal.integrated.rendererType": "dom"
 }
 
-[3] launch to update
+[3] launch.json to update
 "program": "${workspaceFolder}/bin/Debug/netcoreapp2.1/contact-app.dll",
 "webRoot": "${workspaceFolder}/src"
 
