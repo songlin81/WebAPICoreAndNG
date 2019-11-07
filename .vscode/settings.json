@@ -1,3 +1,4 @@
 {
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "http.proxy": "https://v0cn140:Volvo254@httppxsait.srv.volvo.com:8080"
 }
