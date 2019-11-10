@@ -1,4 +1,4 @@
-[0]
+[0] Git setup
   ## 1 >git init
   ## 2 Start by opening up the Source Control tab (the icon looks like a split in the road)
   ## 3 Check thr file system (make sure you can see hidden files) it now includes a .git directory.
